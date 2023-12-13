@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <style>
+    .form-group{
+      padding: 3px 200px;
+    }
+    .se{
+      font-size: 25px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<form class="form-horizontal">
+
+    {% csrf_token %}
+    {% load static %}
+    <div class="btecha"></div>
+    <div class="form-group">
+      <label class="se"><strong>User ID</strong></label>
+      <input class="form-control form-control-lg" type="text" value="{{data.u_id_id}}" name="u_id_id" readonly>
+    </div>
+
+    <p>
+    <div class="form-group">
+      <label class="se"><strong>Email address</strong></label>
+      <input class="form-control form-control-lg" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" value="{{data.email}}" name="email" readonly>
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <p>
+      
+    <div class="form-group">
+      <label class="se"><strong>Name</strong></label>
+      <input class="form-control form-control-lg" type="text" placeholder="Enter Your Full Name" value="{{data.name}}" name="name" readonly>
+    </div>
+
+    <div class="form-group">
+      <label class="se"><strong>Mobile Number</strong></label>
+      <input class="form-control form-control-lg" type="number" value="{{data.mobile}}" name="mobile" readonly>
+    </div>
+
+    <div class="form-group">
+      <label class="se"><strong>Enter Birth Date</strong></label>
+      <input class="form-control form-control-lg" type="text" value="{{data.dob}}" name="dob" readonly onfocus="(this.type = 'date')">
+    </div>
+
+    <div class="form-group">
+      <label class="se"><strong>Enter Aadhar Card Number</strong></label>
+      <input class="form-control form-control-lg" type="number" value="{{data.aadhar}}" name="aadhar" readonly>
+    </div>
+
+    <div class="form-group">
+      <label class="se"><strong>Enter Your PIN CODE</strong></label>
+      <input class="form-control form-control-lg" type="number" value="{{data.pincode}}" name="pincode" readonly>
+    </div>
+
+    <div class="form-group">
+      <label class="se"><strong>Enter your CGPA</strong></label>
+      <input class="form-control form-control-lg" type="text" value="{{data.cgpa}}" placeholder="Upto 3 decimals" name="cgpa" readonly>
+    </div>
+
+    <div class="form-group">
+      <label class="se"><strong>Enter GATE score</strong></label>
+      <input class="form-control form-control-lg" type="text" placeholder="Upto 3 decimals" value="{{data.gatescore}}" name="gatescore" readonly>
+    </div>
+
+    <div class="form-group">
+      <label class="se"><strong>Upload GATE result PDF</strong></label>
+      <a class="form-control form-control-lg" href="{{data.gate}}">Uploaded GATE PDF</a>
+    </div>
+    
+
+    <div class="form-group">
+      <label class="se"><strong>Upload College Result PDF</strong></label>
+      <a class="form-control form-control-lg" href="{{data.marksheet}}">College Result</a>
+    </div>
+
+    <div class="form-group">
+      <label class="se"><strong>Enter Your Passport Size Photo</strong></label>
+      <a class="form-control form-control-lg" href="{{data.img}}">Photo</a>
+    </div>
+
+    <div class="form-group">
+      <label class="se"><strong>Gender</strong></label>
+      <input class="form-control form-control-lg" type="text" value="{{data.gender}}" name="gender" readonly>
+    </div>
+
+    <div class="form-group">
+      <label class="se"><strong>Category</strong></label>
+    <input class="form-control form-control-lg" type="text" value="{{data.category}}" name="category" readonly>
+    </div>
+
+    <div class="form-group">
+      <label class="se"><strong>Enter Your Category Certificate</strong></label>
+      <a class="form-control form-control-lg" href="{{data.certificate}}">Certificate</a>
+    </div>
+
+
+
+
+    <div class="form-group">
+      <label class="se"><strong>Upload your signature</label>
+      <a class="form-control form-control-lg" href="{{data.sign}}">Your signature</a>
+    </div>
+  </div>
+  </form>
+</body>
+</html>

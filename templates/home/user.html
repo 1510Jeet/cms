@@ -1,0 +1,63 @@
+{% extends 'base.html' %} {% block title%} Home {% endblock title%} 
+
+{% block homeactive %} active {% endblock homeactive %} {% block body%}
+<div class="container my-3">
+  <div class="jumbotron">
+    <h1 class="display-4">Welcome to RRU!</h1>
+    <!-- <button type="button" class="btn btn-outline-secondary">Secondary</button> -->
+    <a
+      type="button"
+      class="btn btn-outline-secondary"
+      href="{%url 'btecha' userid=user.id %}"
+      >Apply For B.Tech</a>
+    <a  type="button" class="btn btn-primary btn-sm" href="{%url 'bteche' id=user.id %}">Edit</a>
+    <a  type="button" class="btn btn-primary btn-sm" href="{%url 'btechv' id=user.id %}">View</a>
+
+    <br>
+    <br>
+    <a
+      type="button"
+      class="btn btn-outline-secondary"
+      href="{%url 'mtechcsa' userid=user.id %}"
+      >Apply For M.Tech(CS)</a
+    >
+    <a  type="button" class="btn btn-primary btn-sm" href="{%url 'mtechcse' id=user.id %}">Edit</a>
+    <a  type="button" class="btn btn-primary btn-sm" href="{%url 'mtechcsv' id=user.id %}">View</a>
+
+    <br>
+    <br>
+    <a
+      type="button"
+      class="btn btn-outline-secondary"
+      href="{%url 'mtechaia' userid=user.id %}"
+      >Apply For M.Tech(AI)</a
+    >
+    <a  type="button" class="btn btn-primary btn-sm" href="{%url 'mtechaie' id=user.id %}">Edit</a>
+    <a  type="button" class="btn btn-primary btn-sm" href="{%url 'mtechaiv' id=user.id %}">View</a>
+
+    <br>
+    <br>
+    <a
+      type="button"
+      class="btn btn-outline-secondary"
+      href="{%url 'mscdfa' userid=user.id %}"
+      >Apply For MSCDF</a
+    >
+    <a  type="button" class="btn btn-primary btn-sm" href="{%url 'mscdfe' id=user.id %}">Edit</a>
+    <a  type="button" class="btn btn-primary btn-sm" href="{%url 'mscdfv' id=user.id %}">View</a>
+
+    <br>
+    <br>
+
+    <a
+      type="button"
+      class="btn btn-outline-secondary"
+      href="{%url 'pgda' userid=user.id %}"
+      >Apply For PGD</a
+    >
+    <a  type="button" class="btn btn-primary btn-sm" href="{%url 'pgde' id=user.id %}">Edit</a>
+    <a  type="button" class="btn btn-primary btn-sm" href="{%url 'pgdv' id=user.id %}">View</a>
+  </div>
+</div>
+
+{% endblock body%}

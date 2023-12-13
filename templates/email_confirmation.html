@@ -1,0 +1,9 @@
+{% autoescape off%}
+Welcome to College Management System Login
+
+Hello {{ name }}!
+Please Confirm Your Email by clicking on the following link.
+
+Confirmation Email link: http://{{ domain }}{% url 'activate' uidb64=uid token=token %}
+
+{% endautoescape %}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <style>
+    .form-group{
+      padding: 3px 200px;
+    }
+    .se{
+      font-size: 25px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% load static %}
+    <div class="btecha"></div>
+    <div class="form-group">
+      <label class="se"><strong>User ID</strong></label>
+      <input class="form-control form-control-lg" type="text" value="{{data.id}}" name="u_id_id" readonly>
+    </div>
+
+    <p>
+    <div class="form-group">
+      <label class="se"><strong>Email address</strong></label>
+      <input class="form-control form-control-lg" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" value="{{data.email}}" name="email">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <p>
+      
+    <div class="form-group">
+      <label class="se"><strong>Name</strong></label>
+      <input class="form-control form-control-lg" type="text" placeholder="Enter Your Full Name" name="name">
+    </div>
+
+    <div class="form-group">
+      <label class="se"><strong>Mobile Number</strong></label>
+      <input class="form-control form-control-lg" type="number"  name="mobile">
+    </div>
+
+    <div class="form-group">
+      <label class="se"><strong>Enter Birth Date</strong></label>
+      <input class="form-control form-control-lg" type="text"  name="dob" onfocus="(this.type = 'date')">
+    </div>
+
+    <div class="form-group">
+      <label class="se"><strong>Enter Aadhar Card Number</strong></label>
+      <input class="form-control form-control-lg" type="number" name="aadhar">
+    </div>
+
+    <div class="form-group">
+      <label class="se"><strong>Enter Your PIN CODE</strong></label>
+      <input class="form-control form-control-lg" type="number" name="pincode">
+    </div>
+
+    <div class="form-group">
+      <label class="se"><strong>Enter your cgpa</strong></label>
+      <input class="form-control form-control-lg" type="text" name="cgpa">
+    </div>
+    
+
+    <div class="form-group">
+      <label class="se"><strong>Enter College Result PDF</strong></label>
+      <input class="form-control form-control-lg" type="file" name="marksheet">
+    </div>
+
+    <div class="form-group">
+      <label class="se"><strong>Enter Your Passport Size Photo</strong></label>
+      <input class="form-control form-control-lg" type="file" name="img">
+    </div>
+
+    <div class="form-group">
+      <label class="se"><strong>Gender</strong></label><br>
+      <input type="radio" name="gender" value="M">Male 
+       <input type="radio" name="gender" value="F">FeMale
+    </div>
+
+    <div class="form-group">
+      <label class="se"><strong>Category</strong></label><br>
+      <input type="radio" name="category" value="OPEN">OPEN 
+      <input type="radio" name="category" value="EWS">EWS
+      <input type="radio" name="category" value="OBC">OBC 
+      <input type="radio" name="category" value="SC">SC      
+      <input type="radio" name="category" value="ST">ST 
+      <input type="radio" name="category" value="PWD">PWD  
+    </div>
+
+    <div class="form-group">
+      <label class="se"><strong>Enter Your Category Certificate</strong></label>
+      <input class="form-control form-control-lg"type="file" name="certificate">
+    </div>
+
+
+
+
+    <div class="form-group">
+      <label class="se"><strong>Upload your signature</strong></label>
+      <input class="form-control form-control-lg"type="file" name="sign">
+    </div>
+    <button style="margin-left: 200px;  font-size: 25px;" type="submit" class="btn btn-primary">Submit</button>
+  </div>
+  </form>
+</body>
+
+</html>
